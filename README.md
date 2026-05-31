@@ -2,25 +2,24 @@
 
 A redacted documentary case study in patient-facing records, epistemic injustice, diagnostic uncertainty, and record-mediated harm.
 
-This repository is configured as a static GitHub Pages site. The public-facing site is designed for readers in clinical ethics, diagnostic error, epistemic injustice in medicine, narrative medicine, medical humanities, philosophy of medicine, patient safety, and health-data ethics.
+This site is designed for readers in clinical ethics, diagnostic error, epistemic injustice in medicine, narrative medicine, medical humanities, philosophy of medicine, patient safety, and health-data ethics.
 
 ## Purpose
 
-This site is not designed to adjudicate liability or invite reputational targeting. It is designed to make visible a documented ethical problem: how a provisional diagnostic frame can become a governing reality, shaping care, access, self-understanding, patient testimony, and later institutional response.
+The archive examines how a provisional diagnostic frame can become a governing reality, shaping care, access, self-understanding, patient testimony, and institutional response.
 
-## Core lenses
+## Structure
 
-- Clinical ethics
-- Epistemic injustice
-- Narrative medicine
-- Diagnostic governance
-- Patient safety
-- Health-data ethics
-- Primary documents
+- Clinical and ethical lenses
+- Interpretive essays
+- Patient-authored account
+- Redacted source documents
+- Relational map
+- Limits of claim and redaction policy
 
-## Ethical commitments
+## Editorial principles
 
-- Redact identifying and non-essential personal information.
-- Distinguish documentary fact, patient interpretation, ethical analysis, and unresolved questions.
-- Avoid gratuitous criticism of individuals.
-- Present the case as a scholarly and ethical case study, not a campaign site.
+- Identifying and non-essential personal information is redacted.
+- Documentary fact, patient interpretation, ethical analysis, and unresolved questions are distinguished.
+- The site does not ask readers to make legal, regulatory, disciplinary, or personal findings.
+- The focus is the ethical and epistemic structure visible in the record.
