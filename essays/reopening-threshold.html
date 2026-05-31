@@ -8,14 +8,121 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+:root {
+  --bg: #f8f6f1;
+  --paper: #ffffff;
+  --ink: #1e1b18;
+  --muted: #665f58;
+  --line: #ddd6cc;
+  --accent: #6f4e37;
+  --accent-soft: #efe6dc;
+  --max: 760px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(248, 246, 241, 0.96);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+.site-mark {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.site-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--ink); }
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+.article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 44px;
+  box-shadow: 0 10px 30px rgba(30, 27, 24, 0.04);
+}
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 0.78rem;
+  margin: 0 0 10px;
+}
+h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(2.1rem, 5vw, 3.35rem);
+  line-height: 1.05;
+  margin: 0 0 18px;
+  letter-spacing: -0.035em;
+}
+.lede {
+  color: var(--muted);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.32rem;
+  line-height: 1.45;
+  margin: 0 0 34px;
+}
+p {
+  margin: 0 0 1.15em;
+}
+.callout {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  padding: 16px 18px;
+  margin: 30px 0;
+  color: #332820;
+}
+.article-footer {
+  margin-top: 42px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+.article-footer a {
+  color: var(--accent);
+}
+@media (max-width: 720px) {
+  .header-inner { align-items: flex-start; flex-direction: column; }
+  .article { padding: 28px; border-radius: 14px; }
+  main { padding-top: 32px; }
+}
+</style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner">
       <a class="site-mark" href="../index.html">Diagnostic Governance</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a href="../lenses/clinical-ethics.html">Lenses</a>
         <a href="index.html">Essays</a>
         <a href="../documents/index.html">Documents</a>
@@ -24,41 +131,34 @@
       </nav>
     </div>
   </header>
-
-  <main class="page-main">
-    <div class="container page-grid">
-      <article class="article">
-        <p class="eyebrow">Essay</p>
-        <h1>The Reopening Threshold</h1>
-        <p class="lede">When a diagnostic record can absorb contradiction indefinitely, uncertainty has not been managed. It has been disarmed.</p>
-        <p>A diagnostic system is not unsafe merely because it begins in uncertainty. Medicine often begins there. The patient is complex, signs are incomplete, investigations have limits, and clinicians must sometimes act before the final explanatory structure is available. The safety question is not whether uncertainty existed in July 2017. It did. The question is what the system did with uncertainty once a working frame began to govern records, treatment, certification, and later interpretation.</p>
-        <p>This case turns on a distinction that is easy to miss: there is a difference between recording uncertainty and allowing uncertainty to govern. A note may contain atypical features, unanswered questions, differential possibilities, medication cautions, genetic speculation, and unresolved symptoms while still organising the patient around a dominant diagnostic frame. In that situation uncertainty remains visible but loses authority. It becomes descriptive rather than operative.</p>
+  <main>
+    <article class="article">
+      <p class="eyebrow">Essay</p>
+      <h1>The Reopening Threshold</h1>
+      <p class="lede">When a diagnostic record can absorb contradiction indefinitely, uncertainty has not been managed. It has been disarmed.</p>
+        <p>A diagnostic system is not unsafe merely because it begins in uncertainty. Medicine often begins there. The patient is complex, signs are incomplete, investigations have limits, and clinicians must sometimes act before the final explanatory structure is available. The safety question is not whether uncertainty existed in July 2017. It plainly did. The question is what the system did with uncertainty once a working frame began to organise records, treatment, certification, and later interpretation.</p>
+        <p>This case turns on a distinction that is easy to miss. There is a difference between recording uncertainty and allowing uncertainty to govern. A record may contain atypical features, unanswered questions, differential possibilities, medication cautions, genetic speculation, and unresolved symptoms, while still organising the patient around a dominant diagnostic frame. In that situation, uncertainty remains visible but loses authority. It becomes descriptive rather than operative.</p>
         <p>That distinction explains why the case is not only about diagnosis. It is about diagnostic governance. A diagnosis can begin as a provisional clinical tool and then become an administrative reality. It can structure medication decisions, welfare certification, referrals, handover, patient identity, future specialist interpretation, complaint handling, and data accuracy. Once that happens, the diagnosis is no longer just a hypothesis. It is a governing instrument.</p>
-        <p>The safety failure begins when no later contradiction is strong enough to reopen the frame. If a record has no reopening threshold, every future fact can be handled as a variation within the existing model. The patient can deteriorate. The originating symptom can persist. Treatment response can be unusual. Peripheral explanations can fail. A later specialist can reframe causation. Genetic confirmation can arrive after years of reliance. Yet the inherited record may still behave as if its original organising premise remains intact.</p>
+        <p>The safety failure begins when no later contradiction is strong enough to reopen the frame. If a diagnostic system has no defined reopening threshold, every future fact can be handled as a variation within the existing model. The patient can deteriorate. The originating symptom can persist. Treatment response can be unusual. Peripheral explanations can fail. A later specialist can reframe causation. Genetic confirmation can arrive after years of reliance. Yet the inherited record may still behave as if its original organising premise remains intact.</p>
         <p>That is the problem of the reopening threshold.</p>
-        <p>A reopening threshold is the point at which accumulated mismatch stops being treated as background complexity and begins to require reassessment of the governing frame. It is not hindsight. It does not require later certainty to be projected backwards. It asks a narrower and stricter question: given what was known at the time, when did the pattern become sufficiently discordant that responsible governance required the record to pause, qualify, refer, test, or reopen?</p>
+        <p>A reopening threshold is the point at which accumulated mismatch stops being treated as background complexity and begins to require reassessment of the governing frame. It is not the same as hindsight. It does not require later certainty to be projected backwards. It asks a stricter question: given what was known at the time, when did the pattern become sufficiently discordant that responsible governance required the record to pause, qualify, refer, test, or reopen?</p>
         <p>The entry point matters. The GP referral did not present a clean textbook diagnosis waiting to be named. It brought forward abnormal gait, stiffness, increased tone, occupational impairment, and severe foot pathology. Parkinsonism was queried, not declared. The receiving task was therefore not only to decide whether Parkinsonism was present. It was to explain a foot-centred gait failure.</p>
         <p>Once that is understood, the later record reads differently. The presence of parkinsonian signs may justify a working diagnosis. It does not automatically discharge the duty to explain the initiating signal. A safe record would have preserved the foot-centred problem as an active unresolved variable until it had been integrated, falsified, or explicitly superseded. The question is not whether clinicians were entitled to suspect Parkinsonism. They were. The question is whether the diagnostic frame became too authoritative before the presenting driver had been dealt with.</p>
-        <p>The first reopening signal was the mismatch between the referral-defined problem and the hospital's formal abstraction of that problem. Translation is clinically necessary; every referral is converted into a specialist representation. But where translation drops the initiating variable, the system needs a safety mechanism to ensure that the dropped variable is not lost. In this case the feet should have remained a governing check on the diagnostic frame: if the feet remain unexplained, the frame remains provisional.</p>
-        <p>The second reopening signal was acknowledged atypicality. Young age, long symptom duration, symmetry, dystonic gait language, minimal tremor, preserved cognition, and prominent pain did not require immediate certainty. They did require diagnostic humility. Atypicality should not merely decorate a preferred diagnosis. It should govern the degree of reliance placed upon that diagnosis. Where atypical features are numerous and the patient is young, the system's tolerance for administrative finality should narrow, not widen.</p>
+        <p>The first reopening signal was the mismatch between the referral-defined problem and the hospital’s formal abstraction of that problem. Translation is clinically necessary; every referral is converted into a specialist representation. But where translation drops the initiating variable, the system needs a safety mechanism to ensure that the dropped variable is not lost. In this case, the feet should have remained a governing check on the diagnostic frame: if the feet remain unexplained, the frame remains provisional.</p>
+        <p>The second reopening signal was acknowledged atypicality. Young age, long symptom duration, symmetry, dystonic gait language, minimal tremor, preserved cognition, and prominent pain did not require immediate certainty. They did require diagnostic humility. Atypicality should not merely decorate a preferred diagnosis. It should govern the degree of reliance placed upon that diagnosis. Where atypical features are numerous and the patient is young, the system’s tolerance for administrative finality should narrow, not widen.</p>
         <p>The third reopening signal was deferral of the principal discriminator. Dopaminergic therapy was not merely a future symptomatic option. In the structure of the case, it had potential discriminatory value. Prudential deferral may be clinically defensible. But prudential deferral and administrative finality sit uneasily together. If a clarifying intervention is withheld for long-term management reasons, the record should preserve the diagnostic frame as explicitly provisional. The system cannot decline to test and then behave as if the untested frame has earned full authority.</p>
-        <p>The fourth reopening signal was the patient's bedside protest. The protest did not need technical language to be structurally important. The patient was not required to say, in specialist terms, that the diagnostic sequence remained incomplete. It was enough that he reasserted the unresolved problem that had brought him to hospital. A safe system would treat such a protest not as dissatisfaction, anxiety, or difficulty accepting diagnosis, but as a final check against translation failure. The patient was effectively saying: the thing you are closing around has not explained the thing I came in with.</p>
+        <p>The fourth reopening signal was the patient’s bedside protest. The protest did not need technical language to be structurally important. The patient was not required to say, in specialist terms, that the diagnostic sequence remained incomplete. It was enough that he reasserted the unresolved problem that had brought him to hospital. A safe system would treat such a protest not as dissatisfaction, anxiety, or difficulty accepting diagnosis, but as a final check against translation failure. The patient was effectively saying: the thing you are closing around has not explained the thing I came in with.</p>
         <p>The fifth reopening signal was later pharmacological behaviour. If a symptom repeatedly changes in response to centrally acting neurological medication, and if peripheral handling does not resolve it, the symptom must not remain administratively peripheral by habit. Medication response is not always diagnostic proof. It is often nonspecific. But it can still be a reopening signal. A system does not need certainty in order to reopen inquiry. It needs discordance sufficient to make non-reopening unsafe.</p>
-        <p>The sixth reopening signal was later therapeutic contradiction. When the patient reported profound relief of long-standing foot pain after Sinemet CR, the question was not whether that response alone proved the original frame wrong. It may not. The stricter question was whether the response remained compatible with continued administrative confidence in the previous explanatory distribution. If pain had repeatedly been treated as peripheral, neuropathic, dermatological, alcohol-related, or separable from the movement disorder, a dramatic dopaminergic response should trigger governed reassessment. It should not simply be absorbed as another manifestation of complexity.</p>
+        <p>The sixth reopening signal was later therapeutic contradiction. When profound relief of long-standing foot pain followed Sinemet CR, the question was not whether that response alone proved the original frame wrong. The stricter question was whether the response remained compatible with continued administrative confidence in the previous explanatory distribution. If pain had repeatedly been treated as peripheral, neuropathic, dermatological, alcohol-related, or separable from the movement disorder, a dramatic dopaminergic response should trigger governed reassessment. It should not simply be absorbed as another manifestation of complexity.</p>
         <p>The seventh reopening signal was genetic clarification. Genetic confirmation in 2026 does not establish that clinicians in 2017 should have possessed 2026 knowledge. That would be hindsight. Its significance is different. It shows why reopening mechanisms exist. Early records often contain fragments whose full meaning is only visible later. Young onset, dystonic features, foot-centred phenomenology, atypical pain, and uncertainty around genetic causation were not meaningless noise. They were reasons to keep the frame revisable.</p>
         <p>The central safety lesson is procedural rather than accusatory. A diagnostic record should contain explicit reopening conditions whenever a provisional frame begins to generate reliance. Those conditions might include persistence of the presenting symptom, contradiction between treatment response and explanatory model, failure of an externalised pathway, new specialist interpretation, new genetic or biomarker evidence, or patient protest concerning the unresolved initiating problem.</p>
         <p>Without such conditions, the record becomes a trap. Every later clinician inherits not only information but hierarchy. The settled label sits at the top. Atypical features sit below it. Patient testimony is quoted but subordinated. Contradictory evidence appears as complication, not correction. The system continues to care, but its care is routed through a frame that may no longer be entitled to govern.</p>
         <p>This is not a demand for diagnostic perfection. It is a demand for diagnostic reversibility. A system may reach a working conclusion in good faith. It may treat cautiously. It may defer medication for reasons it believes protective. It may use a label provisionally while further information is gathered. But if that label begins to organise records, certification, access, future interpretation, and complaint handling, the system must also specify how the label can lose authority.</p>
-        <p>The reopening threshold is the missing safeguard. A safe record does not merely ask, What is the diagnosis? It asks, What would make us reopen this? Until that second question is answered, finality remains premature.</p>
-      </article>
-
-      <aside class="sidebar">
-        <strong>Related</strong>
-        <a href="index.html">Essays index</a><a href="../lenses/patient-safety.html">Patient safety lens</a><a href="administrative-foreclosure.html">Administrative foreclosure</a><a href="recorded-but-not-governing.html">Recorded but not governing</a><a href="../ethics/limits-of-claim.html">Limits of claim</a>
-      </aside>
-    </div>
+        <p>The reopening threshold is the missing safeguard. A safe record does not merely ask: what is the diagnosis? It asks: what would make us reopen this? Until that second question is answered, finality remains premature.</p>
+      <div class="article-footer">
+        <p>For placement: upload this file to the repository’s <code>essays/</code> folder using the filename shown in the download link.</p>
+      </div>
+    </article>
   </main>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>
